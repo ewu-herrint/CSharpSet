@@ -1,6 +1,8 @@
 ﻿/* 
      Name: Tyler Herrin
-     Class Description:
+     Class Description: An implementation of a set, a set being: an unordered collection of values, where each value occurs 
+                        at most once. A group of elements with three properties: (1) all elements belong to a universe, 
+                        (2) either each element is a member of the set or it is not, and (3) the elements are unordered.
 */
 
 using System;
@@ -72,6 +74,10 @@ namespace Assignment1
         {
             get
             {
+                if(index < 0)
+                    throw new IndexOutOfRangeException();
+                if(index >= this.Count)
+                    throw new IndexOutOfRangeException();
                 return list[index];
             }
         }
